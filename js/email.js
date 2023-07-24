@@ -1,7 +1,7 @@
 function sendMail() {
-    let sname = document.getElementById("name").value;
-    let remail = document.getElementById("email").value;
-    let smessage = document.getElementById("message").value;
+    // let sname = document.getElementById("name").value;
+    // let remail = document.getElementById("email").value;
+    // let smessage = document.getElementById("message").value;
 
     var params = {
         name: document.getElementById("name").value,
@@ -12,7 +12,7 @@ function sendMail() {
     const serviceID = "service_1s7duto";
     const templateID = "template_2mu7dyh";
 
-    if (sname == "" || remail == "" || smessage == "") {
+    // if (sname == "" || remail == "" || smessage == "") {
         emailjs
         .send(serviceID,templateID,params)
         .then((res) => {
@@ -23,9 +23,9 @@ function sendMail() {
             window.location.assign('login.html');
         })
         .catch((err) => console.log(err));
-    } else {
-        alert("Please complete the fields!");
-    }
+    // } else {
+    //     alert("Please complete the fields!");
+    // }
         
 
 };
