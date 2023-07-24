@@ -16,6 +16,7 @@
     setTimeout("preventBack()", 0);
     window.onunload = function () { null };
   </script>
+  
 
 </head>
 <body class="bg-dark" onload="">
@@ -39,9 +40,9 @@
             <div class="valid-feedback">Good to go! </div>
             <div class="invalid-feedback">Enter Correct Pin</div>
             </div>
-             <div class="text-center">
-            <button onclick="loginAuthenticate()" type="submit" class="btn btn-dark text btn-sm w-50 ">Login</button>
-             </div>   
+            <div class="text-center">
+              <button onclick="loginAuthenticate()" type="submit" class="btn btn-dark text btn-sm w-50">Login</button>
+            </div>
           </form>
           <hr>
           <div class="text-center">
@@ -61,15 +62,15 @@
               </div>
           </div>       
           <hr>
+          <div class="text-end">
+            <button type="button" class="btn btn-warning btn-sm w-50" onclick="window.location.assign('emailsupport.html')">Contact Support</button>
+          </div>
         </div>
       </div>
-
     </div>
-
   </div>
 
   <div class="row justify-content-center ">
-    
     <div class="col-lg-3 m-3 p-4 pb-1">
       <div class="rounded p-4 shadow" style="background-color: rgb(232, 230, 223);">
         <h5 class="d-flex justify-content-center pb-3">Create Cashier Account</h5>
@@ -87,16 +88,12 @@
           <div class="invalid-feedback">Enter Pin</div>
         </div>
         <div class="text-center">
-        <button onclick="addCashier()" type="submit" class="btn btn-dark text btn-sm w-50">Submit</button>
+          <button onclick="addCashier()" type="submit" class="btn btn-dark text btn-sm w-50">Submit</button>
         </div>
-        </div>
+      </div>
     </div>
-
   </div>
     
-    
-  </div>
-
 <script src="js/login.js"></script> 
 
 </body>
