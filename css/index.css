@@ -7,68 +7,42 @@
     font-family: 'Poppins', sans-serif;
 }
 
-.box1 {
-    background: #f0f0f0;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
-.a{
-    text-decoration: none;
- }
+h1{
+  position: relative;
+  font-size: 2rem;
+  font-family: sans-serif;
+  -webkit-text-stroke: 0.1vw #000000;
   
-.box {
-    border-radius: 50px;
-    width: 60px;
-    height: 60px;
-    background:#0c0c0c;
-    box-shadow:  0 0 0 #0c0c0c,
-                 0 0 0 #0c0c0c,
-                  10px 10px 10px #0c0c0c inset,
-                  -10px -10px 10px #0c0c0c inset;
-    animation: anime 3s cubic-bezier(0.0, 0, 0.0, 0) 1s infinite alternate;
-    /* animation-fill-mode: forwards; */
 }
 
-  @keyframes anime {
-    0% {
-      width: 60px;
-      height: 60px;
-      background: #060000;
-      box-shadow:  0 0 0 #0b0b0b,
-                   0 0 0 #ffffff,
-                    10px 10px 10px #cccccc inset,
-                    -10px -10px 10px #ffffff inset;
-    }
-    25% {
-      width: 60px;
-      height: 60px;
-      background: #0c0101;
-      box-shadow:  10px 10px 10px #cccccc,
-                   10px 10px 10px #ffffff,
-                   0 0 0 #cccccc inset,
-                   0 0 0 #ffffff inset;
-    }
-    50% {
-      width: 60px;
-      height: 240px;
-      background: #f8f8f8;
-      box-shadow:  10px 10px 10px #cccccc,
-                   10px 10px 10px #ffffff,
-                   0 0 0 #cccccc inset,
-                   0 0 0 #ffffff inset;
-    }
-    100% {
-      width: 480px;
-      height: 240px;
-      background: #220101;
-      box-shadow:  40px 40px 40px #cccccc,
-                   0 0 0 #ffffff,
-                   0 0 0 #cccccc inset,
-                   2px 2px 2px #ffffff inset;
-    }
+h1::before{
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  color: #001aff;
+
+  -webkit-text-stroke: 0vw #001aff;
+  border-right: 2px solid #001aff;
+  overflow: hidden;
+  /* transition:animate 6s linear infinite; */
+   animation: animate 6s linear infinite;
+}
+
+@keyframes animate{
+    0%{
+    width: 0;
+  }
+  70%{
+    width: 100%;
+  }
 }
