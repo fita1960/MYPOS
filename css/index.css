@@ -1,38 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap');
+
 * {
-    padding: 0;
-    margin: 0;
+    padding: 10;
+    margin: 10;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
-.box {
-    display:flex;
+body {
+    height: 100vh;
+    width: 100%;
+}
+
+.tab-content {
+    height: 71vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+*{
+    margin:50;
+    padding:50;
+  }
+  .box1 {
+    background: #f0f0f0;
+    box-sizing: border-box;
+    display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background: #1e1c1c;
-}
-.logo1{
-    color:pink ;
-}
-.logo{
-    position: relative;
-    width: 100%;
-    color: #ffffff;
-    font-size: 10em;
-    text-shadow: 0 0 50px #0f0,
-                0 0 100px #0f0,
-                0 0 150px #0f0,
-                0 0 200px #0f0,
-                0 0 250px #0f0;
-    animation: animate 5s linear infinite;
-}
-@keyframes animate
-{
-    0%{
-        filter:hue-rotate(0deg);
+    width: 100vw;
+    height: 100vh;
+  }
+  .a{
+    text-decoration: none;
+  }
+  .box {
+    border-radius: 20px;
+    width: 60px;
+    height: 60px;
+    background:#0c0c0c;
+    box-shadow:  0 0 0 #0c0c0c,
+                 0 0 0 #0c0c0c,
+                  10px 10px 10px #0c0c0c inset,
+                  -10px -10px 10px #0c0c0c inset;
+    animation: anime 3s cubic-bezier(0.0, 0, 0.0, 0) 1s infinite alternate;
+    /* animation-fill-mode: forwards; */
+  }
+
+  @keyframes anime {
+    0% {
+      width: 60px;
+      height: 60px;
+      background: #060000;
+      box-shadow:  0 0 0 #0b0b0b,
+                   0 0 0 #ffffff,
+                    10px 10px 10px #cccccc inset,
+                    -10px -10px 10px #ffffff inset;
     }
-    100%{
-        filter:hue-rotate(360deg);
+    25% {
+      width: 60px;
+      height: 60px;
+      background: #0c0101;
+      box-shadow:  10px 10px 10px #cccccc,
+                   10px 10px 10px #ffffff,
+                   0 0 0 #cccccc inset,
+                   0 0 0 #ffffff inset;
     }
-}
+    50% {
+      width: 60px;
+      height: 240px;
+      background: #f8f8f8;
+      box-shadow:  10px 10px 10px #cccccc,
+                   10px 10px 10px #ffffff,
+                   0 0 0 #cccccc inset,
+                   0 0 0 #ffffff inset;
+    }
+    100% {
+      width: 480px;
+      height: 240px;
+      background: #220101;
+      box-shadow:  40px 40px 40px #cccccc,
+                   0 0 0 #ffffff,
+                   0 0 0 #cccccc inset,
+                   2px 2px 2px #ffffff inset;
+    }
