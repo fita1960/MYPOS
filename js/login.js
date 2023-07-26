@@ -7,15 +7,15 @@ function loginAuthenticate() {
 
     if(fcashiername === "Cyril John" && fcashierpin === "123456") {
         localStorage.setItem('currentCashier', fcashiername);
-        window.location.assign("pos.html");
+        window.location.replace("pos.html");
         alert("Hi Cyril John. You are now logged in.")
     } else if (fcashiername === "Hazel Fel" && fcashierpin === "000000") {
         localStorage.setItem('currentCashier', fcashiername);
-        window.location.assign("pos.html");
+        window.location.replace("pos.html");
         alert("Hi Hazel Fel .You are now logged in.");
     } else if (fcashiername === lcashiername && fcashierpin === lcashierpin) {
         localStorage.setItem('currentCashier', fcashiername);
-        window.location.assign("pos.html");
+        window.location.replace("pos.html");
         alert("Hi " + lcashiername +  ". You are now logged in..")
     } else if (fcashiername == ""){
         alert('Please Select Cashier!');
