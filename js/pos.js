@@ -28,6 +28,27 @@ function ordercart(itemid, itemname, itemprice){
     //Create LI tag
     const orderitemparent = document.createElement('li');
 
+    const deductqtybtn = document.createElement('button');
+    const addqtybtn = document.createElement('button');
+    const deductqtybtntxt = document.createTextNode('-');
+    const addqtybtntxt = document.createTextNode('+');
+    deductqtybtn.setAttribute('onclick', 'updateQty('+i+', -1)');
+    addqtybtn.setAttribute('onclick', 'updateQty('+i+', 1)');
+
+    const qtyspan = document.createElement('span');
+    qtyspan.className = 'px-3 fw-bold item'+ i;
+    const qtytxt = document.createTextNode('1');
+
+    deductqtybtn.className = 'btn btn-danger btn-sm rounded-circle';
+    addqtybtn.className = 'btn btn-success btn-sm rounded-circle';
+
+    deductqtybtn.appendChild(deductqtybtntxt);
+    addqtybtn.appendChild(addqtybtntxt);
+    qtyspan.appendChild(qtytxt);
+    orderitemparent.appendChild(deductqtybtn); 
+    orderitemparent.appendChild(qtyspan);
+    orderitemparent.appendChild(addqtybtn);
+        
     const orderitem = document.createElement('span');
     orderitem.className = 'd-flex justify-content-between align-items-center text-center p-1';
     //Create span for red color
@@ -50,27 +71,6 @@ function ordercart(itemid, itemname, itemprice){
     orderitem.appendChild(deletebutton);
 
     orderitemparent.appendChild(orderitem);
-
-    const deductqtybtn = document.createElement('button');
-    const addqtybtn = document.createElement('button');
-    const deductqtybtntxt = document.createTextNode('-');
-    const addqtybtntxt = document.createTextNode('+');
-    deductqtybtn.setAttribute('onclick', 'updateQty('+i+', -1)');
-    addqtybtn.setAttribute('onclick', 'updateQty('+i+', 1)');
-
-    const qtyspan = document.createElement('span');
-    qtyspan.className = 'px-3 fw-bold item'+ i;
-    const qtytxt = document.createTextNode('1');
-
-    deductqtybtn.className = 'btn btn-danger btn-sm rounded-circle';
-    addqtybtn.className = 'btn btn-success btn-sm rounded-circle';
-
-    deductqtybtn.appendChild(deductqtybtntxt);
-    addqtybtn.appendChild(addqtybtntxt);
-    qtyspan.appendChild(qtytxt);
-    orderitemparent.appendChild(deductqtybtn); 
-    orderitemparent.appendChild(qtyspan);
-    orderitemparent.appendChild(addqtybtn);
 
     //Append the LI tag to parent ordersummary
     ordersummary.appendChild(orderitemparent);
