@@ -1,20 +1,34 @@
+const orderitemidarray = [];
 const orderidarray = [];
 const orderitemsarray = [];
 const orderpricearray = [];
 const orderarray = [];
+const orderitemqty = [];
 
 let i = 0;
 
-function ordercart(itemname, itemprice){
-   
+function ordercart(itemid, itemname, itemprice){
+
+    if(orderitemsarray.indexOf(itemname) > -1) {
+        const itemindexnumber = orderitemsarray.indexOf(itemname);
+        orderitemqty[itemindexnumber] =  orderitemqty[itemindexnumber] + 1;
+        updateQty(orderidarray[itemindexnumber], 1);
+    } else {
+
     orderidarray.push(i);
+
+    orderitemidarray.push(itemid);
     orderitemsarray.push(itemname);
     orderpricearray.push(itemprice);
     orderarray.push(itemname, itemprice);
+    orderitemqty.push(1);
+
 
     let ordersummary = document.getElementById('ordersummary');
     //Create LI tag
-    const orderitem = document.createElement('li');
+    const orderitemparent = document.createElement('li');
+
+    const orderitem = document.createElement('span');
     orderitem.className = 'd-flex justify-content-between align-items-center text-center p-1';
     //Create span for red color
     const orderitempricespan = document.createElement('span');
@@ -32,28 +46,92 @@ function ordercart(itemname, itemprice){
     //Append item to LI
     orderitem.appendChild(orderitemname);
     orderitem.appendChild(orderitempricespan);
+
     orderitem.appendChild(deletebutton);
+
+    orderitemparent.appendChild(orderitem);
+
+    const deductqtybtn = document.createElement('button');
+    const addqtybtn = document.createElement('button');
+    const deductqtybtntxt = document.createTextNode('-');
+    const addqtybtntxt = document.createTextNode('+');
+    deductqtybtn.setAttribute('onclick', 'updateQty('+i+', -1)');
+    addqtybtn.setAttribute('onclick', 'updateQty('+i+', 1)');
+
+    const qtyspan = document.createElement('span');
+    qtyspan.className = 'px-3 fw-bold item'+ i;
+    const qtytxt = document.createTextNode('1');
+
+    deductqtybtn.className = 'btn btn-danger btn-sm rounded-circle';
+    addqtybtn.className = 'btn btn-success btn-sm rounded-circle';
+
+    deductqtybtn.appendChild(deductqtybtntxt);
+    addqtybtn.appendChild(addqtybtntxt);
+    qtyspan.appendChild(qtytxt);
+    orderitemparent.appendChild(deductqtybtn); 
+    orderitemparent.appendChild(qtyspan);
+    orderitemparent.appendChild(addqtybtn);
+
     //Append the LI tag to parent ordersummary
-    ordersummary.appendChild(orderitem);
+    ordersummary.appendChild(orderitemparent);
+
+    i++;
+
+    }
+
     totalitems(); 
     totalcost();
-    i++;
+
     validateCheckoutBtn();
 };
 
+function updateQty(orderid, val){
+    const itemSpan = document.querySelector('.item' + orderid);
+    itemSpan.innerText = parseInt(itemSpan.innerText) + val;
+
+    const indexnum = orderidarray.indexOf(orderid);
+    orderitemqty[indexnum] = parseInt(itemSpan.innerText);
+    totalitems();
+    totalcost();
+    if (itemSpan.innerText == 0) {
+        orderitemidarray.splice(indexnum, 1);
+        orderidarray.splice(indexnum, 1);
+        orderitemsarray.splice(indexnum, 1);
+        orderpricearray.splice(indexnum, 1);
+        orderitemqty.splice(indexnum, 1); 
+        totalitems(); 
+        totalcost();
+        ordersummary.removeChild(itemSpan.parentElement);
+        validateCheckoutBtn();
+    }
+};
+
+
 function totalitems(){
-    document.getElementById('totalitems').innerText = orderitemsarray.length;
+    // document.getElementById('totalitems').innerText = orderitemsarray.length;
+    if(orderitemqty.length) {
+        document.getElementById('totalitems').innerText = orderitemqty.reduce((total, num) => { return total + num })
+    } else {
+        document.getElementById('totalitems').innerText = '0';
+    }
+    
 };
 
 function totalcost(){
     if(orderpricearray.length === 0){
         document.getElementById('totalcost').innerText = 0;
     } else {
-        document.getElementById('totalcost').innerText = orderpricearray.reduce(sumarray).toFixed(2);
-        document.getElementById('totalamt').value = orderpricearray.reduce(sumarray).toFixed(2);
+
+        const totaltemparray = [];
+        orderitemqty.map((quantity, index) => { totaltemparray.push(quantity * orderpricearray[index])})
+
+        document.getElementById('totalcost').innerText = totaltemparray.reduce(sumarray).toFixed(2);
+        document.getElementById('totalamt').value = totaltemparray.reduce(sumarray).toFixed(2);
+        
         function sumarray(total, sum) {
         return total + sum;
         };
+        
     }
 };
 
@@ -65,6 +143,7 @@ function cartClear(){
     orderpricearray.length = 0;
     orderarray.length = 0;
     orderidarray.length = 0;
+    orderitemqty.length = 0;
     i = 0;
     totalitems();
     totalcost();
@@ -73,12 +152,14 @@ function cartClear(){
 
 function deleteItem(orderid, button) {
     const indexnum = orderidarray.indexOf(orderid);
+    orderitemidarray.splice(indexnum, 1);
     orderidarray.splice(indexnum, 1);
     orderitemsarray.splice(indexnum, 1);
     orderpricearray.splice(indexnum, 1);
+    orderitemqty.splice(indexnum, 1);
     totalitems(); 
     totalcost();
-    ordersummary.removeChild(button.parentElement);
+    ordersummary.removeChild(button.parentElement.parentElement);
     validateCheckoutBtn();
 };
 
