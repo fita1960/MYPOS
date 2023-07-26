@@ -12,8 +12,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 </head>
-<body class="bg-dark vh-100">
-  <div class="bg-dark py-3 px-2">
+<body>
+  <div class="bg-dark py-3 px-2 vh-100">
     <div class="row bg-light g-0">
       <div class="col-sm-8 shadow-sm">
         <div class="card m-3">
@@ -55,7 +55,7 @@
               <div class="tab-pane fade show active" id="pills-menu1" role="tabpanel" aria-labelledby="pills-menu1-tab">
                 <div class="row row-cols-2 row-cols-sm-3 row-cols-md-3 row-cols-lg-5 g-4">
                   <div class="col">
-                    <div class="card" onclick="ordercart('Rash Guard Navy Blue', 3499.00);">
+                    <div class="card" onclick="ordercart(1, 'Rash Guard Navy Blue', 3499.00);">
                       <img draggable="false" src="img/n1.jpg" class="card-img-top px-4 pt-4" alt="..." >
                       <div class="card-body">
                         <small class="text-center">Rash Guard</small>
@@ -64,7 +64,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card" onclick="ordercart('Rash Guard Cyan', 3499.00);">
+                    <div class="card" onclick="ordercart(2, 'Rash Guard Cyan', 3499.00);">
                       <img draggable="false" src="img/n2.jpg" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small class="text-center">Rash Guard</small>
@@ -73,7 +73,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card" onclick="ordercart('Rash Guard Royal Blue', 3499.00);">
+                    <div class="card" onclick="ordercart(3, 'Rash Guard Royal Blue', 3499.00);">
                       <img draggable="false" src="img/n3.jpg" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small class="text-center">Rash Guard</small>
@@ -82,7 +82,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card" onclick="ordercart('Rash Guard White', 3499.00);">
+                    <div class="card" onclick="ordercart(4, 'Rash Guard White', 3499.00);">
                       <img draggable="false" src="img/n4.jpg" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small class="text-center">Rash Guard</small>
@@ -91,7 +91,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card" onclick="ordercart('Rash Guard Black', 3499.00);">
+                    <div class="card" onclick="ordercart(5, 'Rash Guard Black', 3499.00);">
                       <img draggable="false" src="img/n5.jpg" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small class="text-center">Rash Guard </small>
@@ -100,7 +100,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card" onclick="ordercart('Rash Guard Pink', 3300.00);">
+                    <div class="card" onclick="ordercart(6, 'Rash Guard Pink', 3300.00);">
                       <img draggable="false" src="img/v1.jpg" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>Fem Rash Guard </small>
@@ -109,7 +109,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card" onclick="ordercart('Rash Guard Mint', 3300.00);">
+                    <div class="card" onclick="ordercart(7, 'Rash Guard Mint', 3300.00);">
                       <img draggable="false" src="img/v2.jpg" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>Fem Rash Guard</small>
@@ -118,7 +118,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card" onclick="ordercart('Rash Guard Black', 3300.00);">
+                    <div class="card" onclick="ordercart(8, 'Rash Guard Black', 3300.00);">
                       <img draggable="false" src="img/v3.jpg" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>Fem Rash Guard</small>
@@ -127,7 +127,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card" onclick="ordercart('Rash Guard Olive', 3300.00);">
+                    <div class="card" onclick="ordercart(9, 'Rash Guard Olive', 3300.00);">
                       <img draggable="false" src="img/v4.jpg" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>Fem Rash Guard</small>
@@ -136,7 +136,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card" onclick="ordercart('Rash Guard Blue', 3300.00);">
+                    <div class="card" onclick="ordercart(10, 'Rash Guard Blue', 3300.00);">
                       <img draggable="false" src="img/v5.jpg" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>Fem Rash Guard</small>
@@ -145,7 +145,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card" onclick="ordercart('Swimsuit Blue', 3499.00);">
+                    <div class="card" onclick="ordercart(11, 'Swimsuit Blue', 3499.00);">
                       <img draggable="false" src="img/x1.jpg" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>1pc Blue</small>
@@ -154,7 +154,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card" onclick="ordercart('Swimsuit Olive', 3499.00);">
+                    <div class="card" onclick="ordercart(12, 'Swimsuit Olive', 3499.00);">
                       <img draggable="false" src="img/x2.jpg" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>1pc Olive</small>
@@ -163,7 +163,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card" onclick="ordercart('Swimsuit Yellow', 3499.00);">
+                    <div class="card" onclick="ordercart(13, 'Swimsuit Yellow', 3499.00);">
                       <img draggable="false" src="img/x3.jpg" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>1pc Yellow</small>
@@ -172,7 +172,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card" onclick="ordercart('Swimsuit Orange', 3499.00);">
+                    <div class="card" onclick="ordercart(14, 'Swimsuit Orange', 3499.00);">
                       <img draggable="false" src="img/x4.jpg" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>1pc Orange</small>
@@ -181,7 +181,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card" onclick="ordercart('Swimsuit Red', 3499.00);">
+                    <div class="card" onclick="ordercart(15, 'Swimsuit Red', 3499.00);">
                       <img draggable="false" src="img/x5.jpg" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>1pc Red</small>
@@ -190,7 +190,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card" onclick="ordercart('2pc Purple', 2199.00);">
+                    <div class="card" onclick="ordercart(16, '2pc Purple', 2199.00);">
                       <img draggable="false" src="img/z1.jpg"  class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>2pc Purple</small>
@@ -199,7 +199,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card" onclick="ordercart('2pc Peach', 2199.00);">
+                    <div class="card" onclick="ordercart(17, '2pc Peach', 2199.00);">
                       <img draggable="false" src="img/z2.jpg" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>2pc Peach</small>
@@ -208,7 +208,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card" onclick="ordercart('2pc Mint', 2199.00);">
+                    <div class="card" onclick="ordercart(18, '2pc Mint', 2199.00);">
                       <img draggable="false" src="img/z3.jpg" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>2pc Mint</small>
@@ -217,7 +217,7 @@
                   </div>
                   </div>
                   <div class="col">
-                    <div class="card" onclick="ordercart('2pc Orange', 2199.00);">
+                    <div class="card" onclick="ordercart(19, '2pc Orange', 2199.00);">
                       <img draggable="false" src="img/z4.jpg" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>2pc Orange</small>
@@ -226,7 +226,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card" onclick="ordercart('2pc Olive', 2199.00);">
+                    <div class="card" onclick="ordercart(20, '2pc Olive', 2199.00);">
                       <img draggable="false" src="img/z5.jpg" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>2pc Olive</small>
@@ -240,7 +240,7 @@
               <div class="tab-pane fade" id="pills-menu2" role="tabpanel" aria-labelledby="pills-menu2-tab">
                 <div class="row row-cols-2 row-cols-sm-3 row-cols-md-3 row-cols-lg-5 g-4">
                   <div class="col">
-                    <div class="card" onclick="ordercart('Aquashoes Purple', 1499.00);">
+                    <div class="card" onclick="ordercart(21, 'Aquashoes Purple', 1499.00);">
                       <img draggable="false" src="img/ad1.jpg" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>Aquashoes Purple</small>
@@ -249,7 +249,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card" onclick="ordercart('Aquashoes Mint', 1499.00);">
+                    <div class="card" onclick="ordercart(22, 'Aquashoes Mint', 1499.00);">
                       <img draggable="false" src="img/ad2.jpg" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>Aquashoes Mint</small>
@@ -258,7 +258,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card" onclick="ordercart('Aquashoes Light Pink', 1499.00);">
+                    <div class="card" onclick="ordercart(23, 'Aquashoes Light Pink', 1499.00);">
                       <img draggable="false" src="img/ad3.jpg" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>Aquashoes Light Pink</small>
@@ -267,7 +267,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card h-100" onclick="ordercart('Aquashoes Green', 1499.00);">
+                    <div class="card" onclick="ordercart(24, 'Aquashoes Green', 1499.00);">
                       <img draggable="false" src="img/ad4.jpg" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>Aquashoes Green</small>
@@ -276,7 +276,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card" onclick="ordercart('Aquashoes Black', 1499.00);">
+                    <div class="card" onclick="ordercart(25, 'Aquashoes Black', 1499.00);">
                       <img draggable="false" src="img/ad5.jpg" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>Aquashoes Black</small>
@@ -285,7 +285,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card" onclick="ordercart('BeachShoes Black', 1399.00);">
+                    <div class="card" onclick="ordercart(26, 'BeachShoes Black', 1399.00);">
                       <img draggable="false" src="img/af1.jpg" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>Beach Shoes Black </small>
@@ -294,7 +294,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card" onclick="ordercart('Beach Shoes White', 1399.00);">
+                    <div class="card" onclick="ordercart(27, 'Beach Shoes White', 1399.00);">
                       <img draggable="false" src="img/af2.jpg" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>Beach Shoes White</small>
@@ -303,7 +303,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card" onclick="ordercart('Beach Shoes Gray', 1399.00);">
+                    <div class="card" onclick="ordercart(28, 'Beach Shoes Gray', 1399.00);">
                       <img draggable="false" src="img/af3.jpg" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>Beach Shoes Gray</small>
@@ -312,7 +312,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card" onclick="ordercart('Beach Shoes Green', 1399.00);">
+                    <div class="card" onclick="ordercart(29, 'Beach Shoes Green', 1399.00);">
                       <img draggable="false" src="img/af4.jpg" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>Beach Shoes Green</small>
@@ -321,7 +321,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card" onclick="ordercart('Beach Shoes Mint', 1399.00);">
+                    <div class="card" onclick="ordercart(30, 'Beach Shoes Mint', 1399.00);">
                       <img draggable="false" src="img/af5.jpg" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>Beach Shoes Mint</small>
@@ -330,7 +330,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card" onclick="ordercart('Water Shoes Pink', 1499.00);">
+                    <div class="card" onclick="ordercart(31, 'Water Shoes Pink', 1499.00);">
                       <img draggable="false" src="img/ag1.jpg" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>Water Shoes Pink</small>
@@ -339,7 +339,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card" onclick="ordercart('Water Shoes Black', 1499.00);">
+                    <div class="card" onclick="ordercart(32, 'Water Shoes Black', 1499.00);">
                       <img draggable="false" src="img/ag2.jpg" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>Water Shoes Black</small>
@@ -348,7 +348,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card" onclick="ordercart('Water Shoes Gray', 1499.00);">
+                    <div class="card" onclick="ordercart(33, 'Water Shoes Gray', 1499.00);">
                       <img draggable="false" src="img/ag3.jpg" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>Water Shoes Gray</small>
@@ -357,7 +357,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card" onclick="ordercart('Water Shoes Blue', 1499.00);">
+                    <div class="card" onclick="ordercart(34, 'Water Shoes Blue', 1499.00);">
                       <img draggable="false" src="img/ag4.jpg" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>Water Shoes Blue</small>
@@ -366,7 +366,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card" onclick="ordercart('Water Shoes Orange', 1499.00);">
+                    <div class="card" onclick="ordercart(35, 'Water Shoes Orange', 1499.00);">
                       <img draggable="false" src="img/ag5.jpg" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>Water Shoes Orange</small>
@@ -375,7 +375,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card" onclick="ordercart('Swim Shoes 1', 1499.00);">
+                    <div class="card" onclick="ordercart(36, 'Swim Shoes 1', 1499.00);">
                       <img draggable="false" src="img/q1.jpg" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>Swim Shoes 1</small>
@@ -384,7 +384,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card" onclick="ordercart('Swim Shoes 2', 1499.00);">
+                    <div class="card" onclick="ordercart(37, 'Swim Shoes 2', 1499.00);">
                       <img draggable="false" src="img/q2.jpg" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <br>
@@ -395,7 +395,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card" onclick="ordercart('Swim Shoes 3', 1499.00);">
+                    <div class="card" onclick="ordercart(38, 'Swim Shoes 3', 1499.00);">
                       <img draggable="false" src="img/q3.jpg" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>Swim Shoes 3</small>
@@ -404,7 +404,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card" onclick="ordercart('Swim Shoes 4', 1499.00);">
+                    <div class="card" onclick="ordercart(39, 'Swim Shoes 4', 1499.00);">
                       <img draggable="false" src="img/q4.jpg" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>Swim Shoes 4</small>
@@ -413,7 +413,7 @@
                     </div>
                   </div>      
                   <div class="col">
-                    <div class="card" onclick="ordercart('Swim Shoes 5', 1499.00);">
+                    <div class="card" onclick="ordercart(40, 'Swim Shoes 5', 1499.00);">
                       <img draggable="false" src="img/q5.jpg" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>Swim Shoes 5</small>
@@ -427,7 +427,7 @@
               <div class="tab-pane fade" id="pills-menu3" role="tabpanel" aria-labelledby="pills-menu3-tab">
                 <div class="row row-cols-2 row-cols-sm-3 row-cols-md-3 row-cols-lg-5 g-4">
                   <div class="col">
-                    <div class="card" onclick="ordercart('Scuba Set Mint', 3499.00);">
+                    <div class="card" onclick="ordercart(41, 'Scuba Set Mint', 3499.00);">
                       <img draggable="false" src="img/na1.jpg" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>Scuba Set Mint</small>
@@ -436,7 +436,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card" onclick="ordercart('Scuba Set Black', 3499.00);">
+                    <div class="card" onclick="ordercart(42, 'Scuba Set Black', 3499.00);">
                       <img draggable="false" src="img/na2.jpg" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>Scuba Set Blk</small>
@@ -445,7 +445,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card" onclick="ordercart('Scuba Set Blue', 3499.00);">
+                    <div class="card" onclick="ordercart(43, 'Scuba Set Blue', 3499.00);">
                       <img draggable="false" src="img/na3.jpg" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>Scuba Set Blue</small>
@@ -454,7 +454,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card" onclick="ordercart('Scuba Set Gray', 3499.00);">
+                    <div class="card" onclick="ordercart(44, 'Scuba Set Gray', 3499.00);">
                       <img draggable="false" src="img/na4.jpeg" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>Scuba Set Gray</small>
@@ -463,7 +463,7 @@
                     </div>
                   </div>
                   <div class="col ">
-                    <div class="card" onclick="ordercart('Scuba Set Pink', 3499.00);">
+                    <div class="card" onclick="ordercart(45, 'Scuba Set Pink', 3499.00);">
                       <img draggable="false" src="img/na5.jpeg" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>Scuba Set Pink</small>
@@ -472,7 +472,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card h-100" onclick="ordercart('Snorkel Set 4', 1799.00);">
+                    <div class="card" onclick="ordercart(46, 'Snorkel Set 4', 1799.00);">
                       <img draggable="false" src="img/ma4.jpeg" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>Snorkel Set 4</small>
@@ -481,7 +481,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card h-100" onclick="ordercart('Snorkel Set 5', 1799.00);">
+                    <div class="card" onclick="ordercart(47, 'Snorkel Set 5', 1799.00);">
                       <img draggable="false" src="img/ma5.jpeg" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>Snorkel Set 5</small>
@@ -490,7 +490,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card h-100" onclick="ordercart('Goggles 1', 999.00);">
+                    <div class="card" onclick="ordercart(48, 'Goggles 1', 999.00);">
                       <img draggable="false" src="img/r1.jpg" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>Goggles 1</small>
@@ -499,7 +499,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card h-100" onclick="ordercart('Goggles 3', 999.00);">
+                    <div class="card" onclick="ordercart(49, 'Goggles 3', 999.00);">
                       <img draggable="false" src="img/r3.jpg" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>Goggles 3</small>
@@ -508,7 +508,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card h-100" onclick="ordercart('Goggles 5', 999.00);">
+                    <div class="card" onclick="ordercart(50, 'Goggles 5', 999.00);">
                       <img draggable="false" src="img/r5.jpeg" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>Goggles 5</small>
@@ -517,7 +517,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card h-100" onclick="ordercart('Goggles 6', 899.00);">
+                    <div class="card" onclick="ordercart(51, 'Goggles 6', 899.00);">
                       <img draggable="false" src="img/w1.jpg" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>Goggles 6</small>
@@ -526,7 +526,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card h-100" onclick="ordercart('Goggles 7', 899.00);">
+                    <div class="card" onclick="ordercart(52, 'Goggles 7', 899.00);">
                       <img draggable="false" src="img/w2.jpg" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>Goggles 7</small>
@@ -535,7 +535,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card h-100" onclick="ordercart('Goggles 8', 899.00);">
+                    <div class="card" onclick="ordercart(53, 'Goggles 8', 899.00);">
                       <img draggable="false" src="img/w3.jpg" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>Goggles 8</small>
@@ -544,7 +544,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card h-100" onclick="ordercart('Goggles 9', 899.00);">
+                    <div class="card" onclick="ordercart(54, 'Goggles 9', 899.00);">
                       <img draggable="false" src="img/w4.jpg" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>Goggles 9</small>
@@ -553,7 +553,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card h-100" onclick="ordercart('Goggles 10', 899.00);">
+                    <div class="card" onclick="ordercart(55, 'Goggles 10', 899.00);">
                       <img draggable="false" src="img/w5.jpg" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>Goggles 10</small>
@@ -567,7 +567,7 @@
               <div class="tab-pane fade" id="pills-menu4" role="tabpanel" aria-labelledby="pills-menu4-tab">
                 <div class="row row-cols-2 row-cols-sm-3 row-cols-md-3 row-cols-lg-5 g-4">
                   <div class="col">
-                    <div class="card" onclick="ordercart('Mesh Bag Red', 1499.00);">
+                    <div class="card" onclick="ordercart(56, 'Mesh Bag Red', 1499.00);">
                       <img draggable="false" src="img/zz1.webp" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>Mesh Bag Red</small>
@@ -576,7 +576,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card" onclick="ordercart('Mesh Bag Blk 2', 1499.00);">
+                    <div class="card" onclick="ordercart(57, 'Mesh Bag Blk 2', 1499.00);">
                       <img draggable="false" src="img/zz2.webp" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>Mesh Bag Blk</small>
@@ -585,7 +585,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card" onclick="ordercart('Printed Bag', 2499.00);">
+                    <div class="card" onclick="ordercart(58, 'Printed Bag', 2499.00);">
                       <img draggable="false" src="img/zz3.webp" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>Printed Bag</small>
@@ -594,7 +594,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card" onclick="ordercart('Black Bag', 2499.00);">
+                    <div class="card" onclick="ordercart(59, 'Black Bag', 2499.00);">
                       <img draggable="false" src="img/zz4.webp" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>Black Bag</small>
@@ -603,7 +603,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card" onclick="ordercart('Orange Bag', 2499.00);">
+                    <div class="card" onclick="ordercart(60, 'Orange Bag', 2499.00);">
                       <img draggable="false" src="img/zz5.webp" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>Orange Bag</small>
@@ -612,7 +612,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card" onclick="ordercart('Paddle 1', 999.00);">
+                    <div class="card" onclick="ordercart(61, 'Paddle 1', 999.00);">
                       <img draggable="false" src="img/paddle1.webp" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>Paddle 1</small>
@@ -621,7 +621,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card" onclick="ordercart('Paddle 2', 1499.00);">
+                    <div class="card" onclick="ordercart(62, 'Paddle 2', 1499.00);">
                       <img draggable="false" src="img/paddle2.webp" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>Paddle 2</small>
@@ -630,7 +630,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card" onclick="ordercart('Paddle 3', 1299.00);">
+                    <div class="card" onclick="ordercart(63, 'Paddle 3', 1299.00);">
                       <img draggable="false" src="img/paddle3.webp" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>Paddle 3</small>
@@ -639,7 +639,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card" onclick="ordercart('Paddle 4', 1399.00);">
+                    <div class="card" onclick="ordercart(64, 'Paddle 4', 1399.00);">
                       <img draggable="false" src="img/paddle4.webp" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>Paddle 4</small>
@@ -648,7 +648,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card" onclick="ordercart('Paddle 5', 1499.00);">
+                    <div class="card" onclick="ordercart(65, 'Paddle 5', 1499.00);">
                       <img draggable="false" src="img/paddle5.webp" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>Paddle 5</small>
@@ -657,7 +657,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card" onclick="ordercart('Kickboard 1', 1299.00);">
+                    <div class="card" onclick="ordercart(66, 'Kickboard 1', 1299.00);">
                       <img draggable= "false" src="img/k1.webp" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>Kickboard 1</small>
@@ -666,7 +666,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card" onclick="ordercart('Kickboard 2', 1100.00);">
+                    <div class="card" onclick="ordercart(67, 'Kickboard 2', 1100.00);">
                       <img draggable="false" src="img/k2.webp" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>Kickboard 2</small>
@@ -675,7 +675,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card" onclick="ordercart('Kickboard 3', 1200.00);">
+                    <div class="card" onclick="ordercart(68, 'Kickboard 3', 1200.00);">
                       <img draggable="false" src="img/k3.webp" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>Kickboard 3</small>
@@ -684,7 +684,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card" onclick="ordercart('Kickboard 4', 1299.00);">
+                    <div class="card" onclick="ordercart(69, 'Kickboard 4', 1299.00);">
                       <img draggable="false" src="img/k4.webp" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>Kickboard 4</small>
@@ -693,7 +693,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card" onclick="ordercart('Kickboard 5', 1100.00);">
+                    <div class="card" onclick="ordercart(70, 'Kickboard 5', 1100.00);">
                       <img draggable="false" src="img/k5.webp" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>Kickboard 5</small>
@@ -702,7 +702,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card" onclick="ordercart('Swimcap 1', 499.00);">
+                    <div class="card" onclick="ordercart(71, 'Swimcap 1', 499.00);">
                       <img draggable="false" src="img/xx1.webp" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>Swimcap 1</small>
@@ -711,7 +711,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card h-100" onclick="ordercart('Swimcap 2', 499.00);">
+                    <div class="card" onclick="ordercart(72, 'Swimcap 2', 499.00);">
                       <img draggable="false" src="img/xx2.jpg" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>Swimcap 2</small>
@@ -720,7 +720,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card h-100" onclick="ordercart('Swimcap 3', 499.00);">
+                    <div class="card" onclick="ordercart(73, 'Swimcap 3', 499.00);">
                       <img draggable="false" src="img/xx3.jpg" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>Swimcap 3</small>
@@ -729,7 +729,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card h-100" onclick="ordercart('Swimcap 4', 499.00);">
+                    <div class="card" onclick="ordercart(74, 'Swimcap 4', 499.00);">
                       <img draggable="false" src="img/xx4.jpg" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>Swimcap 4</small>
@@ -738,7 +738,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card h-100" onclick="ordercart('Swimcap 5', 499.00);">
+                    <div class="card" onclick="ordercart(75, 'Swimcap 5', 499.00);">
                       <img draggable="false" src="img/xx5.jpg" class="card-img-top px-4 pt-4" alt="...">
                       <div class="card-body">
                         <small>Swimcap 5</small>
